@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharky</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/Alternative Grafiken - Sharkie/1.Sharkie/1.IDLE/1.png" type="image/x-icon">
+
+    <script src="./classes/world.class.js"></script>
+    <script src="./classes/drawable-objects.class.js"></script>
+    <script src="./classes/movable-objekt.class.js"></script>
+    <script src="./classes/endboss.class.js"></script>
+    <script src="./classes/statusbar-life.class.js"></script>
+    <script src="./classes/statusbar-coin.class.js"></script>
+    <script src="./classes/statusbar-poison.class.js"></script>
+    <script src="./classes/character.class.js"></script>
+    <script src="./classes/finslap.class.js"></script>
+
+    <script src="./classes/water.class.js"></script>
+    <script src="./classes/fish.class.js"></script>
+    <script src="./classes/jelly-fish.class.js"></script>
+    <script src="./classes/poison.class.js"></script>
+    <script src="./classes/coins.class.js"></script>
+
+    <script src="./classes/background-objekt.class.js"></script>
+    <script src="./classes/keyboard.class.js"></script>
+    <script src="./classes/level.class.js"></script>
+    <script src="./classes/throwable-object.class.js"></script>
+
+    <script src="./levels/level1.js"></script>
+    <script src="./js/htmlcode.js"></script>
+    <script src="./js/game.js"></script>
+
+</head>
+
+<header id="header">
+    <h1>Sharkey</h1>
+</header>
+
+<body onload="startGame()">
+
+    <div id="content" class="content-container">
+
+    </div>
+
+    <canvas class="d-none" id="canvas" width="720px" height="480px"></canvas>
+
+    <button id="moveLeftMobile" class="move-left-mobile d-none" ontouchstart="moveLeftMobile(true)"
+        ontouchend="moveLeftMobile(false)"><img
+            src="./img/Alternative Grafiken - Sharkie/3. Background/arrow_back_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""></button>
+    <button id="moveUpMobileL" class="move-up-mobile-L d-none" ontouchstart="moveUpMobileL(true)"
+        ontouchend="moveUpMobileL(false)"><img src="./img/Alternative Grafiken - Sharkie/3. Background/arrow_upward_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+    <button id="moveDownMobileL" class="move-down-mobile-L d-none" ontouchstart="moveDownMobileL(true)"
+        ontouchend="moveDownMobileL(false)"><img src="./img/Alternative Grafiken - Sharkie/3. Background/arrow_downward_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+    <button id="attackMobile" class="attack-mobile d-none" ontouchstart="attackMobile(true)"
+        ontouchend="attackMobile(false)"><img src="./img/Alternative Grafiken - Sharkie/3. Background/destruction_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+    <button id="moveRightMobile" class="move-right-mobile d-none" ontouchstart="moveRightMobile(true)"
+        ontouchend="moveRightMobile(false)"><img
+            src="./img/Alternative Grafiken - Sharkie/3. Background/arrow_forward_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""></button>
+    <button id="moveUpMobileR" class="move-up-mobile-R d-none" ontouchstart="moveUpMobileR(true)"
+        ontouchend="moveUpMobileR(false)"><img src="./img/Alternative Grafiken - Sharkie/3. Background/arrow_upward_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+    <button id="moveDownMobileR" class="move-down-mobile-R d-none" ontouchstart="moveDownMobileR(true)"
+        ontouchend="moveDownMobileR(false)"><img src="./img/Alternative Grafiken - Sharkie/3. Background/arrow_downward_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+
+
+    <button onclick="toggleMute()" class="mute d-none" id="mute">
+        <img id="muteIcon"
+            src="./img/Alternative Grafiken - Sharkie/3. Background/volume_mute_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png"
+            alt="">
+    </button>
+
+    <div class="tip">
+        <h2>Tip</h2>
+        <p>
+            A fin slap (melee attack) is executed with the left and right arrows simultaneously.
+        </p>
+    </div>
+
+
+    <div id="rotateMessage">Bitte drehen Sie Ihr <br> Gerät ins Querformat.</div>
+
+
+</body>
+
+<footer id="footer">
+    <p>Copyright 2024 | Robin Oester-Barkey</p>
+    <a href="./privacy_policy.html" target="_blank">Privacy Policy</a>
+    <a href="./legal_notice.html" target="_blank">Legal Notice</a>
+</footer>
+
+</html>

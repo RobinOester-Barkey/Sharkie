@@ -1,0 +1,393 @@
+@font-face {
+    font-family: 'MeineSchrift';
+    src: url('./fonts/LuckiestGuy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'MeineSchrift', sans-serif;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'MeineSchrift', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./img/Alternative Grafiken - Sharkie/3. Background/ai-generated-8794467_1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.tip {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+    max-width: 760px;
+    top: 50%;
+}
+
+canvas {
+    position: absolute;
+    top: 10%;
+    background-color: black;
+    border: solid 30px lightblue;
+    border-radius: 30px;
+
+}
+
+.content-container {
+    position: absolute;
+    top: 10%;
+}
+
+.start-game {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./img/Alternative Grafiken - Sharkie/3. Background/Dark/1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 720px;
+    border: solid 30px lightblue;
+    border-radius: 30px;
+}
+
+.start-game img {
+    width: 85%;
+}
+
+.start-game button {
+    position: absolute;
+    top: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 300px;
+}
+
+.gameover {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./img/Alternative Grafiken - Sharkie/3. Background/Dark/1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 720px;
+    border: solid 30px lightblue;
+    border-radius: 30px;
+}
+
+.gameover img {
+    width: 85%;
+}
+
+.gameover button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 400px;
+}
+
+.win {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./img/Alternative Grafiken - Sharkie/3. Background/Dark/1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 720px;
+    border: solid 30px lightblue;
+    border-radius: 30px;
+}
+
+.win img {
+    width: 100%;
+    height: 100%;
+}
+
+.win button {
+    width: 300px;
+    position: absolute;
+    top: 140px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media only screen and (max-width: 780px) {
+
+    canvas,
+    .start-game,
+    .win,
+    .gameover {
+        transform: scale(0.8);
+    }
+
+    .start-game button,
+    .win button,
+    .gameover button {
+        top: 70px;
+        transform: scale(0.8);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .mute {
+        left: 80% !important;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+
+    canvas,
+    .start-game,
+    .win,
+    .gameover {
+        transform: scale(0.6);
+    }
+
+    .start-game button,
+    .win button,
+    .gameover button {
+        top: 60px;
+        transform: scale(0.6);
+    }
+}
+
+@media only screen and (max-height: 1200px) {
+    .tip {
+        top: 60%;
+    }
+
+    .mute {
+        top: 720px !important;
+    }
+}
+
+@media only screen and (max-height: 1050px) {
+    .tip {
+        top: 65%;
+    }
+
+    .mute {
+        top: 630px !important;
+    }
+}
+
+@media only screen and (max-height: 950px) {
+    .tip {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 1000px) {
+
+    header,
+    footer {
+        display: none;
+    }
+
+    canvas,
+    .content-container,
+    .win,
+    .gameover,
+    .start-game {
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        transform: scale(1.0) !important;
+    }
+
+    .start-game button {
+        top: 0px;
+        transform: scale(0.6);
+    }
+
+    .win button {
+        top: 80px;
+    }
+
+    .mute {
+        top: 20px !important;
+        left: 90% !important;
+    }
+
+    .mute img {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .tip {
+        display: none;
+    }
+
+    .move-left-mobile {
+        background-color: transparent;
+        position: absolute;
+        bottom: 22.5%;
+        left: 5%;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: none;
+    }
+
+    .move-right-mobile {
+        background-color: transparent;
+        position: absolute;
+        bottom: 22.5%;
+        right: 5%;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: none;
+    }
+
+    .move-right-mobile img,
+    .move-left-mobile img,
+    .move-down-mobile-R img,
+    .move-up-mobile-R img,
+    .move-down-mobile-L img,
+    .move-up-mobile-L img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .attack-mobile {
+        background-color: transparent;
+        position: absolute;
+        bottom: 5%;
+        right: 50%;
+        height: 120px;
+        width: 30%;
+        border-radius: 20%;
+        border: none;
+        transform: translateX(50%);
+    }
+
+    .move-down-mobile-R {
+        background-color: transparent;
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: none;
+    }
+
+    .move-up-mobile-R {
+        background-color: transparent;
+        position: absolute;
+        bottom: 40%;
+        right: 5%;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: none;
+    }
+
+    .move-down-mobile-L {
+        background-color: transparent;
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: none;
+    }
+
+    .move-up-mobile-L {
+        background-color: transparent;
+        position: absolute;
+        bottom: 40%;
+        left: 5%;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: none;
+    }
+
+}
+
+#rotateMessage {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 20%;
+    z-index: 1000;
+}
+
+.mute {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 800px;
+    left: 60%;
+    z-index: 999;
+}

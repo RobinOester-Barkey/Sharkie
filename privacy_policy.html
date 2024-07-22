@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Privacy Police</title>
+</head>
+
+<style>
+    @font-face {
+    font-family: 'MeineSchrift';
+    src: url('./fonts/LuckiestGuy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    html,
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('./img/Alternative Grafiken - Sharkie/3. Background/ai-generated-8794467_1920.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    h1, h2 {
+        font-family: 'MeineSchrift';
+    }
+
+    .page-content {
+        position: absolute;
+        top: 10%;
+        height: fit-content;
+        width: 50%;
+        background-color: rgba(255,255,255,0.6);
+        border-radius: 30px;
+        overflow: hidden;
+        /* Hide scrollbars */
+    }
+
+    .main-content {
+        margin: 16px;
+        height: calc(100% - 32px);
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    @media (max-width: 768px) {
+        .page-content {
+            width: 80%;
+            top: 5%;
+        }
+    }
+</style>
+
+<body>
+    <div class="page-content">
+        <main class="main-content">
+                <div class="title-privat">
+                    <h1>Privacy Police</h1>
+                </div>
+
+                <div class="privacy-police">
+                    <div class="subtitle">
+                        <h2>Data Collection</h2>
+                        <p>We do not collect any personal data or usage data from the game Sharkey itself. Any data
+                            collection is conducted solely by the browser or platform on which the game is played. This
+                            data collection is subject to the privacy policy of the respective browser or platform
+                            provider.</p>
+                    </div>
+                    <div class="subtitle">
+                        <h2>Data Sharing</h2>
+                        <p>Since we do not collect any personal data from the game Sharkey, we do not share any personal
+                            data with third parties. Any data shared by the browser or platform provider is governed by
+                            their respective privacy policies.</p>
+                    </div>
+                    <div class="subtitle">
+                        <h2>Data Security</h2>
+                        <p>As we do not handle or store any personal data from the game Sharkey, data security measures
+                            related to personal data are not applicable. We recommend reviewing the security measures
+                            provided by the browser or platform provider for information on how your data is protected.
+                        </p>
+                    </div>
+                    <div class="subtitle">
+                        <h2>User Rights</h2>
+                        <p>Any rights you have regarding data collected by the browser or platform provider (such as
+                            access, correction, or deletion) should be exercised in accordance with the privacy policy
+                            of the respective provider. We do not have access to or control over data collected by these
+                            third parties.</p>
+                    </div>
+                </div>
+        </main>
+    </div>
+</body>
+
+</html>
